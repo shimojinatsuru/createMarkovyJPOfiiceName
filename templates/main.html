@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="jp-ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create Office Name</title>
+    
+    <!-- bootstrap の css link -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css" integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container text-center">
+
+    <h3 style="text-align:center; padding: 3rem 0 0 0;">Imaginative name of a Japanese office</h3>
+
+    <div class="form-group" style="padding: 0 3rem 0 3rem;">
+    <form action="generate" method="get">
+        <!-- Jinja2 の For Loop -->
+        <input type="submit" class="btn btn-primary" style="margin: 2rem 0 0 0;" value="Create a name for a Japanese office">
+    </form>
+    </div>  
+
+    <br>
+
+    <div class="container text-left border border-primary" style="padding:3rem;">
+        <!-- Jinja2 の For Loop -->
+        {% for o_n in office_name %}
+            <p>{{o_n}}</p>
+        {% endfor %}
+    </div>
+    </div>
+
+    <!-- bootstrap の javascript link -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js" integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp" crossorigin="anonymous"></script>
+</body>
+</html>
